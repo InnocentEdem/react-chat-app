@@ -1,0 +1,3 @@
+export const ADD_NEW_MESSAGE = 'ADD_NEW_MESSAGE'
+export const ADD_NEW_USER = 'ADD_NEW_USER'
+export const DELETE_MESSAGE ='DELETE_MESSAGE'

@@ -1,0 +1,48 @@
+.talk_bubble {
+    margin: 20px;
+    display: block;
+    position: relative;
+    width: 70%;
+    height: auto;
+    background-color: #5d3fd3;
+    padding:1rem;
+    border-radius:1rem;
+    float:right
+  }
+.talk_bubble2 {
+    margin: 20px;
+    display: block;
+    position: relative;
+    width: 70%;
+    height: auto;
+    background-color: #dfd9f6;
+    padding:1rem;
+    border-radius:1rem;
+    float:left
+  }
+  
+  .triangle.left_top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color:#dfd9f6 transparent transparent transparent;
+  }
+  
+  .triangle.right_top:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: auto;
+      right: -20px;
+      top: 0;
+      bottom: auto;
+      border: 32px solid;
+      border-color: #5d3fd3 transparent transparent transparent;
+  }
