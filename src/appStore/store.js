@@ -11,7 +11,7 @@ const chatReducer = (state = initialState,{type,payload})=>{
         case actionTypes.ADD_NEW_MESSAGE :
             return {
                 ...state,
-                messages:[...state.messages,...payload]
+                messages:[...state.messages,payload]
             }
         case actionTypes.DELETE_MESSAGE : 
         return {
