@@ -32,11 +32,11 @@ function ContentArea({ messages, username }) {
           message?.username === username ? (
             <Box sx={{display:"flex",justifyContent:"flex-end" }}>
               {" "}
-              <MessageOut text={message.text} />
+              <MessageOut text={message.text} username ={message.username} />
             </Box>
           ) : (
             <Box>
-              <MessageIn text={message.text} />
+              <MessageIn text={message.text} username = {message.username} />
             </Box>
           )
         )}
