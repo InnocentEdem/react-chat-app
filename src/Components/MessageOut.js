@@ -1,8 +1,8 @@
-import { Avatar, Box } from '@mui/material';
+import { Avatar, Box, Typography } from '@mui/material';
 import React from 'react'
 import classes from './message.module.css'
 
-function MessageOut({text}) {
+function MessageOut({text,username}) {
   return (
     <Box sx={{margin:"1rem",color:"#fff"}}>
     <Box sx={{display:"flex"}}>
@@ -14,7 +14,9 @@ function MessageOut({text}) {
       </div>
     </div>
     <Box sx={{width:"10%"}}>
-      <Avatar sx={{width:"5rem", height:"5rem"}}/>
+      <Avatar sx={{width:"5rem", height:"5rem"}} >
+        {username}
+      </Avatar>
     </Box>
     </Box>
     </Box>

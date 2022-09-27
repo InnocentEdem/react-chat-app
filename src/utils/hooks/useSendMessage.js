@@ -6,8 +6,6 @@ function useSendMessage() {
     const timeNow = new Date().toISOString()
     const messages = useSelector(state=>state.chat.messages)
     const users = useSelector(state=>state.chat.users)
-    console.log(users,"users");
-
     const send = ({username,text})=>{
         dispatch(addNewMessage({text,timeSent:timeNow,username}))
 
@@ -16,7 +14,6 @@ function useSendMessage() {
         dispatch(addNewUser(username))
     }
     const hasUsername = (username) =>{
-        console.log(username);
         return users.includes(username)
     }
     const getMessages = (limit)=>{
