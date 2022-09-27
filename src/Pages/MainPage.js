@@ -76,7 +76,7 @@ function MainPage() {
     <Container maxWidth='md' >
       <Box sx={styles.mainContainer}>
       <Box sx={styles.displayMessages}>
-        <ContentArea/>
+        <ContentArea messages = {messages} username = {username}/>
       </Box>
       <Box sx={styles.messageInput}>
         <Box sx={{margin:"auto",width:"100%"}}>

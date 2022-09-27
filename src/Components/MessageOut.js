@@ -2,14 +2,14 @@ import { Avatar, Box } from '@mui/material';
 import React from 'react'
 import classes from './message.module.css'
 
-function MessageOut() {
+function MessageOut({text}) {
   return (
-    <Box sx={{float:"right",margin:"1rem",color:"#fff"}}>
+    <Box sx={{margin:"1rem",color:"#fff"}}>
     <Box sx={{display:"flex"}}>
     <div style={{position:"relative"}}>
       <div className={`${classes.talk_bubble} ${classes.triangle} ${classes.right_top}`}>
         <div className={classes.talktext}>
-          <p>Left flush at the top. thkjdkthhjgft ktghldasljkjf  ktgjltjdaslja  jasdkjas jkal;sjdljklsdjtjk tasdltjkljlalsdjf g</p>
+          <p>{text}</p>
         </div>
       </div>
     </div>

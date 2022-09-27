@@ -1,6 +1,6 @@
 .talk_bubble {
     margin: 20px;
-    display: inline-block;
+    display: block;
     position: relative;
     width: 70%;
     height: auto;
@@ -11,7 +11,7 @@
   }
 .talk_bubble2 {
     margin: 20px;
-    display: inline-block;
+    display: block;
     position: relative;
     width: 70%;
     height: auto;

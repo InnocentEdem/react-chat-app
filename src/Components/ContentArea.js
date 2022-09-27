@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { useTheme } from '@mui/material/styles'
 import { Box } from '@mui/material'
 import MessageOut from './MessageOut'
@@ -14,16 +14,35 @@ const useStyles = ()=>(
         }
     }
 )
-function ContentArea() {
-    const theme = useTheme()
-    const styles = useStyles(theme)
+function ContentArea({ messages, username }) {
+  const theme = useTheme();
+  const styles = useStyles(theme);
+  const scrollRef = useRef(null)
+
+  const handleScroll = () =>{
+   scrollRef.current && scrollRef.current.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+  }
+  useEffect(()=>{
+    handleScroll()
+  },[messages])
   return (
     <Box sx={styles.root}>
-        <MessageOut/>
-        <MessageIn/>
-
+      {messages &&
+        messages.map((message) =>
+          message?.username === username ? (
+            <Box sx={{display:"flex",justifyContent:"flex-end" }}>
+              {" "}
+              <MessageOut text={message.text} />
+            </Box>
+          ) : (
+            <Box>
+              <MessageIn text={message.text} />
+            </Box>
+          )
+        )}
+        <div ref={scrollRef}></div>
     </Box>
-  )
+  );
 }
 
 export default ContentArea
